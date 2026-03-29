@@ -1,0 +1,152 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Space+Grotesk:wght@500;700&display=swap");
+
+:root {
+    --bg: #0f1a1d;
+    --bg-soft: #18262b;
+    --card: #f9fbfb;
+    --card-strong: #ffffff;
+    --accent: #27b3a6;
+    --accent-dark: #1a7d74;
+    --text: #102027;
+    --text-soft: #425055;
+    --border: #dce5e7;
+    --shadow: 0 12px 28px rgba(8, 24, 29, 0.18);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    font-family: "DM Sans", "Segoe UI", sans-serif;
+    color: var(--text);
+    background:
+        radial-gradient(1100px 600px at 15% 15%, rgba(39, 179, 166, 0.2), transparent 60%),
+        radial-gradient(900px 500px at 85% 10%, rgba(255, 255, 255, 0.18), transparent 70%),
+        linear-gradient(135deg, var(--bg), var(--bg-soft));
+}
+
+.title {
+    width: min(920px, 92vw);
+    margin: 48px auto 64px;
+    padding: 8px;
+}
+
+.title-1 {
+    margin: 0 0 24px;
+    text-align: center;
+    font-family: "Space Grotesk", "DM Sans", sans-serif;
+    font-size: clamp(1.6rem, 2.4vw + 1rem, 2.6rem);
+    letter-spacing: 0.18em;
+    font-weight: 700;
+    color: #f6fffd;
+    text-transform: uppercase;
+}
+
+.Inputform {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    margin: 24px auto 36px;
+    padding: 24px;
+    width: min(520px, 100%);
+    background: rgba(255, 255, 255, 0.92);
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    border-radius: 18px;
+    box-shadow: var(--shadow);
+    backdrop-filter: blur(6px);
+}
+
+.formedit {
+    width: 100%;
+}
+
+.userinput {
+    width: 100%;
+    padding: 14px 16px;
+    border-radius: 12px;
+    border: 1px solid var(--border);
+    font-size: 1rem;
+    color: var(--text);
+    background-color: var(--card-strong);
+    outline: none;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.userinput:focus {
+    border-color: var(--accent);
+    box-shadow: 0 0 0 4px rgba(39, 179, 166, 0.2);
+}
+
+.input-button {
+    width: 100%;
+    padding: 14px 18px;
+    border-radius: 12px;
+    border: none;
+    background: linear-gradient(135deg, var(--accent), #43d3c1);
+    color: #05312c;
+    font-weight: 700;
+    font-size: 1rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: transform 0.15s ease, box-shadow 0.2s ease;
+}
+
+.input-button:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 10px 18px rgba(11, 34, 39, 0.18);
+}
+
+.input-button:active {
+    transform: translateY(0);
+}
+
+.PayDisplay-RatesDisplay {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 18px;
+}
+
+.PayDisplay-RatesDisplay > * {
+    margin: 0;
+    padding: 18px 16px;
+    text-align: center;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    box-shadow: 0 10px 20px rgba(9, 28, 33, 0.15);
+    color: var(--text-soft);
+}
+
+.item1 {
+    grid-column: 1 / -1;
+    background: linear-gradient(135deg, #effffd, #ffffff);
+    color: var(--text);
+    font-size: clamp(1.4rem, 1.8vw + 1rem, 2.2rem);
+    font-weight: 700;
+}
+
+
+.item2 {
+    
+}
+
+@media (max-width: 600px) {
+    .title {
+        margin: 32px auto 48px;
+    }
+
+    .Inputform {
+        padding: 20px;
+    }
+
+    .PayDisplay-RatesDisplay {
+        gap: 14px;
+    }
+}
+
